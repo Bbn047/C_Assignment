@@ -11,7 +11,11 @@ int main()
     printf("enter a number : ");
     scanf("%d", &number);
 
-    if (number > 0)
+    if (number < 0)
+    {
+        printf(" error negative numbers ");
+    }
+    else
     {
         // loop until reach given number
         for (int i = 1; i <= number; i++)
@@ -19,6 +23,7 @@ int main()
             sum = (sum * i); // multiply i value with sum
         }
     }
+
     printf("factorial of thr given number %d is : %d", number, sum);
 
     return 0;
