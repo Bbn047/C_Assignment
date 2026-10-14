@@ -22,9 +22,8 @@ int main()
         {
             sum = (sum * i); // multiply i value with sum
         }
+        printf("factorial of thr given number %d is : %d", number, sum);
     }
-
-    printf("factorial of thr given number %d is : %d", number, sum);
 
     return 0;
 }
