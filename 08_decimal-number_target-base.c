@@ -78,6 +78,7 @@ int main()
   // call the function for convert the value
   converted_base(decimal_number, base_value, converted_value);
 
+  //print the output
   printf("converted value : %s \n", converted_value);
 
   return 0;
