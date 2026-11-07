@@ -26,7 +26,9 @@ float mult(float num1, float num2)
 
 float div(float num1, float num2)
 {
-    if((num2 == 0 )| (num1 == 0)){
+    // chaek any of the number is 0 when do division
+    if ((num2 == 0) | (num1 == 0))
+    {
         printf("error division by zero not valid \n");
         return 0.0f;
     }
@@ -37,10 +39,11 @@ float calculation(float num1, float num2, char operator)
 {
     float sum = 0.0f;
 
+    // using switch case to do the corect operation
     switch (operator)
     {
     case '+':
-        sum = add(num1, num2);
+        sum = add(num1, num2); // calling the function for do the specific operation
         break;
 
     case '-':
@@ -52,11 +55,11 @@ float calculation(float num1, float num2, char operator)
         break;
 
     case '/':
-       sum = div(num1, num2);
+        sum = div(num1, num2);
         break;
 
     default:
-    printf("error entered invalid operator \n");
+        printf("error entered invalid operator \n");
     }
 
     return sum;
@@ -66,6 +69,8 @@ int main()
 {
     float number1, number2;
     char operator;
+
+    // get the numbers from user
     printf("enter first number : ");
     scanf("%f", &number1);
 
@@ -75,6 +80,7 @@ int main()
     printf("enter the operator (+, -, /, *) : ");
     scanf(" %c", &operator);
 
+    // print the final result after done the operation
     float result = calculation(number1, number2, operator);
     printf("the result is : %.2f %c %.2f = %.2f \n", number1, operator, number2, result);
 
