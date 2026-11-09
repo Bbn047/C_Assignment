@@ -32,7 +32,7 @@ int main()
     printf("no of bits : ");
     scanf("%d", &n);
 
-    // clear bit
+    // masking the bits
     /*
        number = 8
        position = 2
